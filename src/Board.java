@@ -1,15 +1,17 @@
 public class Board {
     private char[][] board;
+    public int respuesta;
 
-    public Board() {
-        board = new char[3][3];
+    public Board(int respuesta) {
+        this.respuesta = respuesta;
+        board = new char[respuesta][respuesta];
         initializeBoard();
     }
 
     // Initializes the empty board
     public void initializeBoard() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+        for (int i = 0; i < respuesta; i++) {
+            for (int j = 0; j < respuesta; j++) {
                 board[i][j] = '-';
             }
         }
@@ -18,9 +20,9 @@ public class Board {
     // Draw the board
     public void drawBoard() {
         System.out.println("-------------");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < respuesta; i++) {
             System.out.print("| ");
-            for (int j = 0; j < 3; j++) {
+            for (int j = 0; j < respuesta; j++) {
                 System.out.print(board[i][j] + " | ");
             }
             System.out.println("\n-------------");

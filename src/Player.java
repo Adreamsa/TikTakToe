@@ -1,6 +1,6 @@
 public class Player {
     private char symbol;
-
+    public boolean rule = false;
     public Player(char symbol) {
         this.symbol = symbol;
     }
