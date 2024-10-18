@@ -1,12 +1,14 @@
 public class TicTacToe {
     private boolean rule = false;
     private Board board;
+    public int tam = 3 ;
     private Player currentPlayer;
     private InputManager inputManager;
     private Verification verification;
 
     public TicTacToe(int tam, boolean rule) {
-        this.rule=  rule;
+        this.rule = rule;
+        this.tam = tam;
         board = new Board(tam);
         verification = new Verification(board);
         inputManager = new InputManager();
@@ -23,11 +25,11 @@ public class TicTacToe {
                 board.drawBoard();
 
 
-                if (verification.isWinner()) {
-                    if(rule)
-                    System.out.println("¡Jugador " + currentPlayer.getSymbol() + " gana!");
+                if (verification.isWinner(tam)) {
+                    if (rule)
+                        System.out.println("¡Jugador " + currentPlayer.getSymbol() + " gana!");
                     else
-                    System.out.println("¡Jugador " + currentPlayer.getSymbol() + " pierde!");
+                        System.out.println("¡Jugador " + currentPlayer.getSymbol() + " pierde!");
                     break;
                 }
 
