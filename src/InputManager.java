@@ -8,11 +8,26 @@ public class InputManager {
     }
 
     public int[] getPlayerMove(Player player) {
-        System.out.print("Jugador " + player.getSymbol() + ", ingresa tu movimiento (fila y columna): ");
+        int row = -1;
+        int col = -1;
 
-        int row = scanner.nextInt() - 1; // Subtract 1 to adjust to index 0
-        int col = scanner.nextInt() - 1;
+        while (true) {
+            System.out.print("Jugador " + player.getSymbol() + ", ingresa tu movimiento (fila y columna): ");
 
-        return new int[] { row, col };
+            String inputRow = scanner.next();
+            String inputCol = scanner.next();
+
+            // Validate that the input is a number
+            if (!inputRow.matches("\\d+") || !inputCol.matches("\\d+")) {
+                System.out.println("Entrada inválida. Debes ingresar números.");
+                continue; // Repeat the cycle
+            }
+
+            row = Integer.parseInt(inputRow) - 1; // Subtract 1 to adjust to index 0
+            col = Integer.parseInt(inputCol) - 1;
+
+
+            return new int[] { row, col };
+        }
     }
 }
