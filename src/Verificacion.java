@@ -22,11 +22,7 @@ public class Verificacion {
         }
 
         // Verificar diagonales
-        if ((b[0][0] != '-' && b[0][0] == b[1][1] && b[1][1] == b[2][2]) || (b[0][2] != '-' && b[0][2] == b[1][1] && b[1][1] == b[2][0])) {
-            return true;
-        }
-
-        return false;
+        return (b[0][0] != '-' && b[0][0] == b[1][1] && b[1][1] == b[2][2]) || (b[0][2] != '-' && b[0][2] == b[1][1] && b[1][1] == b[2][0]);
     }
 
     // Verifica si el tablero está lleno
