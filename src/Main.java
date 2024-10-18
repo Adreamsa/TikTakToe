@@ -2,10 +2,8 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-        public static void main(String[] args) {
-            TicTacToe game = new TicTacToe(); // Se inicializa el juego
-            game.play(); // Comienza el juego
-        }
+    public static void main(String[] args) {
+        TicTacToe game = new TicTacToe(); // Se inicializa el juego
+        game.play(); // Comienza el juego
     }
-
-1
+}
