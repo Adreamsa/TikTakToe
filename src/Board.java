@@ -6,7 +6,7 @@ public class Board {
         initializeBoard();
     }
 
-    // Inicializa el tablero vacío
+    // Initializes the empty board
     public void initializeBoard() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -15,7 +15,7 @@ public class Board {
         }
     }
 
-    // Dibuja el tablero en la consola
+    // Draw the board
     public void drawBoard() {
         System.out.println("-------------");
         for (int i = 0; i < 3; i++) {
@@ -27,12 +27,12 @@ public class Board {
         }
     }
 
-    // Actualiza el tablero con el movimiento del jugador
+    // Updates the board with the player's movement.
     public void updateBoard(int row, int col, char symbol) {
         board[row][col] = symbol;
     }
 
-    // Método para acceder al tablero
+    // Method to access the board
     public char[][] getBoard() {
         return board;
     }

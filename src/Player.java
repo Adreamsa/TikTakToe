@@ -9,7 +9,7 @@ public class Player {
         return symbol;
     }
 
-    // Cambia el símbolo del jugador
+    // Change the player symbol
     public void switchPlayer() {
         symbol = (symbol == 'X') ? 'O' : 'X';
     }

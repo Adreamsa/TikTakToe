@@ -8,7 +8,7 @@ public class TicTacToe {
         board = new Board();
         verification = new Verification(board);
         inputManager = new InputManager();
-        currentPlayer = new Player('X'); // Comienza con el jugador X
+        currentPlayer = new Player('X'); // Start with player X
     }
 
     public void play() {
@@ -30,7 +30,7 @@ public class TicTacToe {
                     break;
                 }
 
-                currentPlayer.switchPlayer(); // Cambia al siguiente jugador
+                currentPlayer.switchPlayer(); // Switch to the next player
             } else {
                 System.out.println("Movimiento inválido. Intenta de nuevo.");
             }
