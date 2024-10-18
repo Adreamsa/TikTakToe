@@ -14,25 +14,15 @@ public class Verificacion {
     public boolean isWinner() {
         char[][] b = board.getBoard();
 
-        // Verificar filas
+        // Verificar filas y columnas
         for (int i = 0; i < 3; i++) {
-            if (b[i][0] != '-' && b[i][0] == b[i][1] && b[i][1] == b[i][2]) {
-                return true;
-            }
-        }
-
-        // Verificar columnas
-        for (int j = 0; j < 3; j++) {
-            if (b[0][j] != '-' && b[0][j] == b[1][j] && b[1][j] == b[2][j]) {
+            if ((b[i][0] != '-' && b[i][0] == b[i][1] && b[i][1] == b[i][2]) || (b[0][i] != '-' && b[0][i] == b[1][i] && b[1][i] == b[2][i])) {
                 return true;
             }
         }
 
         // Verificar diagonales
-        if (b[0][0] != '-' && b[0][0] == b[1][1] && b[1][1] == b[2][2]) {
-            return true;
-        }
-        if (b[0][2] != '-' && b[0][2] == b[1][1] && b[1][1] == b[2][0]) {
+        if ((b[0][0] != '-' && b[0][0] == b[1][1] && b[1][1] == b[2][2]) || (b[0][2] != '-' && b[0][2] == b[1][1] && b[1][1] == b[2][0])) {
             return true;
         }
 
