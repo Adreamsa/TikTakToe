@@ -1,7 +1,7 @@
-public class Verificacion {
+public class Verification {
     private Board board;
 
-    public Verificacion(Board board) {
+    public Verification(Board board) {
         this.board = board;
     }
 

@@ -2,11 +2,11 @@ public class TicTacToe {
     private Board board;
     private Player currentPlayer;
     private InputManager inputManager;
-    private Verificacion verificacion;
+    private Verification verification;
 
     public TicTacToe() {
         board = new Board();
-        verificacion = new Verificacion(board);
+        verification = new Verification(board);
         inputManager = new InputManager();
         currentPlayer = new Player('X'); // Comienza con el jugador X
     }
@@ -16,16 +16,16 @@ public class TicTacToe {
 
         while (true) {
             int[] move = inputManager.getPlayerMove(currentPlayer);
-            if (verificacion.validateInput(move[0], move[1])) {
+            if (verification.validateInput(move[0], move[1])) {
                 board.updateBoard(move[0], move[1], currentPlayer.getSymbol());
                 board.drawBoard();
 
-                if (verificacion.isWinner()) {
+                if (verification.isWinner()) {
                     System.out.println("¡Jugador " + currentPlayer.getSymbol() + " gana!");
                     break;
                 }
 
-                if (verificacion.isBoardFull()) {
+                if (verification.isBoardFull()) {
                     System.out.println("¡Empate!");
                     break;
                 }
